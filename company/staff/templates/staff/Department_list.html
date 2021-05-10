@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin-left:650px;
+}
+th{color:#0000FF;}
+td { text-align: center; }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="text-align:center;">List of Departments</h2>
+<table>
+    <tr>
+        <th>Departmentname</th>
+        <th>Manager</th>
+    </tr>
+{% for department in Departments %}
+    <tr>
+        <td>{{department.Departmentname}}</td>
+        <td>{{department.Manager}}</td>
+        </tr>
+{% endfor %}
+</table>
+</body>
+</html>
